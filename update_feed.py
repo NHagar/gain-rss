@@ -184,7 +184,7 @@ def update_xml_feed(new_items: List[FeedItem], xml_path: str):
 </image>
 <generator>GAIN GH Action</generator>
 <lastBuildDate>Thu, 29 May 2025 18:16:28 GMT</lastBuildDate>
-<atom:link href="" rel="self" type="application/rss+xml"/>
+<atom:link href="https://github.com/NHagar/gain-rss/blob/main/data/gain_feed.xml" rel="self" type="application/rss+xml"/>
 <webMaster>
 <![CDATA[ nicholas.hagar@northwestern.edu ]]>
 </webMaster>
