@@ -174,13 +174,13 @@ def update_xml_feed(new_items: List[FeedItem], xml_path: str):
 <![CDATA[ Generative AI in the Newsroom - Medium ]]>
 </title>
 <description>
-<![CDATA[ The Generative AI in the Newsroom project is an effort to collaboratively figure out how and when (or when not) to use generative AI in news production. - Medium ]]>
+<![CDATA[ The Generative AI in the Newsroom project is an effort to collaboratively figure out how and when (or when not) to use generative AI in news production. ]]>
 </description>
-<link>https://generative-ai-newsroom.com?source=rss----df04cefca135---4</link>
+<link>https://github.com/NHagar/gain-rss/blob/main/data/gain_feed.xml</link>
 <image>
 <url>https://cdn-images-1.medium.com/proxy/1*TGH72Nnw24QL3iV9IOm4VA.png</url>
 <title>Generative AI in the Newsroom - Medium</title>
-<link>https://generative-ai-newsroom.com?source=rss----df04cefca135---4</link>
+<link>https://github.com/NHagar/gain-rss/blob/main/data/gain_feed.xml</link>
 </image>
 <generator>GAIN GH Action</generator>
 <lastBuildDate>Thu, 29 May 2025 18:16:28 GMT</lastBuildDate>
