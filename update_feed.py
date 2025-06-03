@@ -149,6 +149,9 @@ def add_items_to_database(items: List[FeedItem], db_path: str):
             lambda x: str(x) if isinstance(x, list) else x
         )
 
+        # Ensure all columns are treated as strings to avoid date conversion issues
+        df = df.astype(str)
+
         # Insert new items
         con.execute("INSERT INTO medium_feed SELECT * FROM df")
         print(f"Added {len(items)} new items to database")
