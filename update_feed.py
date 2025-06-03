@@ -136,8 +136,8 @@ def add_items_to_database(items: List[FeedItem], db_path: str):
                 guid VARCHAR,
                 categories VARCHAR,
                 dc_creator VARCHAR,
-                pub_date VARCHAR,
-                atom_updated VARCHAR,
+                pub_date DATE,
+                atom_updated DATE,
                 content_encoded VARCHAR
             )
         """)
@@ -149,8 +149,9 @@ def add_items_to_database(items: List[FeedItem], db_path: str):
             lambda x: str(x) if isinstance(x, list) else x
         )
 
-        # Ensure all columns are treated as strings to avoid date conversion issues
-        df = df.astype(str)
+        # Ensure date fields are in the correct format
+        df["pub_date"] = pd.to_datetime(df["pub_date"], errors="coerce").dt.date
+        df["atom_updated"] = pd.to_datetime(df["atom_updated"], errors="coerce").dt.date
 
         # Insert new items
         con.execute("INSERT INTO medium_feed SELECT * FROM df")
